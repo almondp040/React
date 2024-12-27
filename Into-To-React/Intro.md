@@ -32,19 +32,19 @@
     - In order for us to render the component we must put the function name inside of some HTML brackets, this is how we call the function
     - We are only able to return 1 HTML option at a time, next section will show us how to do this!
 
-        export default function App() {
-  return (
-    <div className="App">
-      <Greeter/>
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-    </div>
-  );
-}
+                export default function App() {
+                return (
+                    <div className="App">
+                    <Greeter/>
+                    <h1>Hello CodeSandbox</h1>
+                    <h2>Start editing to see some magic happen!</h2>
+                    </div>
+                );
+                }
 
-function Greeter() {
-  return <h1>Hello!!</h1>;
-}
+                    function Greeter() {
+                    return <h1>Hello!!</h1>;
+                    }
 
 
  - Importing and Exporting Components
