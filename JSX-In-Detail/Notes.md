@@ -88,6 +88,8 @@
 
 
 - Random Pokemon Practice Build (For tomorrow)
+    - Here's our URL: https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png
+    - The 1 next to png is the pokemon ID that we need to pass in a random number
 
 
 
