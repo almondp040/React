@@ -10,5 +10,3 @@
 - Create React App
     - A way to quickly set up React for our screen, but it's better to just use Vite
 
--Tour of a Vite App
-    -
