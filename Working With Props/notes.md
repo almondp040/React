@@ -39,3 +39,25 @@
     -Objects work the same way!
 
 - React Conditionals
+    - works exactly the same way that if conditional statements work is one method
+    - we can also set these conditionals to be inline on our HTML element, by putting out JS logic inside of the H2 directly: 
+                       <h1>{num1 === num2 ? "You Win!!!" : "You Lose :("}</h1>
+    - We can also render HTML elements based off of the conditional as well so instead of showing the "You Win" or "You Lose" strings, you can replace them with HTML elements
+                            {num1 === num2 ? <h3>You Win!!</h3> : <h3>You Lose :(</ h3>}
+
+-React Developer Tools
+    - Install React Dev Tools for Chrome then we can use it via the Dev Tools!
+
+- Adding Dynamic Styles
+   -We can either make a class for the styles or set them inline using style = {}
+   -Then we can set JS and our styles together to a variable, not very useful for overall styles like font size, if its dynamic put it in 
+                    function Heading({color = "olive", text}) {
+
+                     return (
+                    <h1 style={{color: color}}>{text}</h1>
+                                 )
+    
+                                                                                    }
+
+                                export default Heading; 
+
