@@ -59,5 +59,27 @@
     
                                                                                     }
 
-                                export default Heading; 
+                                export default Heading;
+
+- Rendering Arrays with Map
+    -We can use map() to take our array items and then map them to elements! 
+    - No need to use a arrow function for this, use MDN docs as a easy sure fire reference
+    - Map is pretty much the standard for using arrays in React
+    - For Example: 
+                                        function ColorList({colors}) {
+
+                    const lis = colors.map(color => <li>{color}</li>)
+
+                        return (
+                            
+                            <div>
+                                <p>Color List</p>
+                            <ul>{lis}</ul>
+                            </div>
+                        
+                        )
+                    }
+
+                    export default ColorList
+
 
