@@ -6,6 +6,9 @@ import Die from './Die'
 import ListPicker from './ListPicker'
 import DoubleDice from './DoubleDice'
 import Heading from './Heading'
+import ColorList from './ColorList'
+import SlotMachine from './SlotMachine'
+
 
 
 
@@ -13,24 +16,14 @@ import Heading from './Heading'
 
 function App() {
 
+  
   return (
-    <div>
-      <Heading color = "magenta" text={"Welcome!"}></Heading>
-      <Heading text={"Welcome!"}></Heading>
-        <DoubleDice></DoubleDice>
-        
-      
-
-      {/* <Greeter person = "Almond" from = "Georgia"/>
-      <Greeter person = "Ted" from = "Alabama"/>
-      <Greeter person = "Rosa" from = "New York"/>
-      <Greeter></Greeter>
-      <Die numSides = {20}/>
-      <Die numSides = {6}/>
-      <Die numSides = {12}/>
-      <Die></Die> */}
-     
-    </div>
+    <>
+    <h1>Slot Machine Excercise!</h1>
+    <h2></h2>
+    <SlotMachine val1={5} val2={5} val3={3} fontSize={'3rem'} />
+    <SlotMachine val1={5} val2={5} val3={5} fontSize={'3rem'}/>
+    </>
   )
 }
 
