@@ -82,6 +82,8 @@
                 
                     export default ColorList
 
--This is a test push! Again!!
+- Key Prop
+    -If we see a error stating a we're missing a key or each child should have a unique key prop this is how we will fix it!
+    - See shoping List Files in the React Repo for example!
 
 
