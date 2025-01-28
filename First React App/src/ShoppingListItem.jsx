@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 function ShoppingListItem({item, quantity, completed}) {
     const styles = {color: completed ? "red" : "yellow", textDecoration: completed ? "line-through" : "none" }
     return (
@@ -5,5 +7,11 @@ function ShoppingListItem({item, quantity, completed}) {
     )
 }
 
+ShoppingListItem.propTypes = {
+    item: PropTypes.string, 
+    quantity: PropTypes.number, 
+    completed: PropTypes.bool
+
+}
 export default ShoppingListItem
 
