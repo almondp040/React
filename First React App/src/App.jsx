@@ -12,6 +12,10 @@ import ShoppingList from './ShoppingList'
 import PropertyList from './PropertyList'
 import Clicker from './Clicker'
 import Form from './Form'
+import Counter from './Counter'
+import Toggler from './Toggler'
+import TogglerCounter from './ToggleCounter'
+
 
 
 
@@ -42,8 +46,11 @@ function App() {
   return (
     <>
 
-  <Clicker message= "Hi!" buttonText = "Please Click Me!"></Clicker>
-  <Clicker message= "Please Stop Clicking Me!" buttonText = "Do Not Click!"></Clicker>
+{/* <Counter></Counter> */}
+{/* <Toggler></Toggler> */}
+<TogglerCounter></TogglerCounter>
+  {/* <Clicker message= "Hi!" buttonText = "Please Click Me!"></Clicker>
+  <Clicker message= "Please Stop Clicking Me!" buttonText = "Do Not Click!"></Clicker> */}
   {/* <Form></Form> */}
 
     {/* <ShoppingList items={data}></ShoppingList> */}
