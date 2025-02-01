@@ -32,3 +32,9 @@
         -So if useState(5), then React will remember the 5. 
 
     -ColorBox Example for 1/30!
+
+- Setting State with Update Functions
+    -Looking at how we update state, we will use an updater function to take the current value of the state and then update it that way 
+    -Using this way we can make updates to the existing values of the state
+    -See Counter2 file for an example!
+    -This only matters if we are looking to use a previous version of the state
