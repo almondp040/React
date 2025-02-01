@@ -15,6 +15,11 @@ import Form from './Form'
 import Counter from './Counter'
 import Toggler from './Toggler'
 import TogglerCounter from './ToggleCounter'
+import ColorBox from './ColorBox'
+import ColorBoxGrid from './ColorBoxGrid'
+import Counter2 from './Counter2'
+
+
 
 
 
@@ -38,6 +43,24 @@ const properties = [
   { id: 129035, name: "Gold Miner Campground", rating: 4.69, price: 96 },
 ];
 
+const colors = [
+  "#E53935",
+  "#E91E63",
+  "#9C27B0",
+  "#673AB7",
+  "#3F51B5",
+  "#2196F3",
+  "#03A9F4",
+  "#00BCD4",
+  "#009688",
+  "#4CAF50",
+  "#8BC34A",
+  "#CDDC39",
+  "#FFEB3B",
+  "#FFC107",
+  "#FF9800",
+  "#FF5722",
+];
 
 
 function App() {
@@ -46,19 +69,10 @@ function App() {
   return (
     <>
 
-{/* <Counter></Counter> */}
-{/* <Toggler></Toggler> */}
-<TogglerCounter></TogglerCounter>
-  {/* <Clicker message= "Hi!" buttonText = "Please Click Me!"></Clicker>
-  <Clicker message= "Please Stop Clicking Me!" buttonText = "Do Not Click!"></Clicker> */}
-  {/* <Form></Form> */}
+    
+    <Counter2/>
 
-    {/* <ShoppingList items={data}></ShoppingList> */}
-    {/* <PropertyList properties = {properties}></PropertyList> */}
-    {/* <h1>Slot Machine Excercise!</h1>
-    <h2></h2>
-    <SlotMachine val1={5} val2={5} val3={3} fontSize={'3rem'} />
-    <SlotMachine val1={5} val2={5} val3={5} fontSize={'3rem'}/> */}
+
     </>
   )
 }
