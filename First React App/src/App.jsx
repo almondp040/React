@@ -18,6 +18,12 @@ import TogglerCounter from './ToggleCounter'
 import ColorBox from './ColorBox'
 import ColorBoxGrid from './ColorBoxGrid'
 import Counter2 from './Counter2'
+import Dumbo from './Dumbo'
+import ScoreKeeper from './ScoreKeeper'
+import EmojiClicker from './EmojiClicker'
+
+
+
 
 
 
@@ -69,8 +75,8 @@ function App() {
   return (
     <>
 
-    
-    <Counter2/>
+   
+   <EmojiClicker></EmojiClicker>
 
 
     </>
