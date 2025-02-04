@@ -38,3 +38,26 @@
     -Using this way we can make updates to the existing values of the state
     -See Counter2 file for an example!
     -This only matters if we are looking to use a previous version of the state
+
+- State Initializer Functions 
+    - Setting up our initial state for useState()
+    - Pass in the function name WITHOUT running the function to set the initial state. 
+    - See Dumbo.jsx for an example!
+    - If we want the function to run every time then we pass in the function() and itll run every single time 
+
+- When does React Re-Render? 
+    - React automatically looks for comparisons to see if the stuff is different or not 
+
+- Working with Objects in State
+    -To work with objects in React we will need to copy the object in order for us to use the object with State
+    - Same thing with Arrays and Objects, we ALWAYS make a copy and then we can use it
+    -Copy the Array and Object first, then modify the specific item you wanna modify
+    - View the Scorekeeper.jsx code for an example!
+
+
+- Working with Arrays in State
+    - We can use a number of Array Methods but it is essentially the same idea as working with objects in React. Make a copy using the Spread Operator, then we can use our Arrays / Objects
+    - See Emoji Clicker for an example 
+
+- Generating IDs with UUIDs in React
+    - Using the UUID library via NPM Install uuid
