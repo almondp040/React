@@ -61,3 +61,18 @@
 
 - Generating IDs with UUIDs in React
     - Using the UUID library via NPM Install uuid
+    - See Emoji Picker as an example
+
+- Deleting From Arrays the React Way
+    - How we remove an element from an array, we would still look to make a copy of that array! 
+    - We will pass a arrow function in the onClick
+    - Easiest option would be to use the filter() method
+    - See the deleteEmoji Function for an example
+
+
+- Common Array Updating Patterns
+    - View commonArrayPatterns.js for examples!
+
+- Updating All Elements in an Array!
+    - View the Emoji Clicker Component!
+
