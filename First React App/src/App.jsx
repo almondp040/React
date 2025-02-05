@@ -21,6 +21,8 @@ import Counter2 from './Counter2'
 import Dumbo from './Dumbo'
 import ScoreKeeper from './ScoreKeeper'
 import EmojiClicker from './EmojiClicker'
+import ScoreKeeper2 from './ScoreKeeper2'
+
 
 
 
@@ -75,8 +77,8 @@ function App() {
   return (
     <>
 
-   
-   <EmojiClicker></EmojiClicker>
+   <ScoreKeeper2 numPlayers={10} target={5}></ScoreKeeper2>
+    
 
 
     </>
