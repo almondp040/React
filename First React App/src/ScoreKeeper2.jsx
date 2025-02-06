@@ -1,40 +1,51 @@
 import { useState } from "react";
 
-function ScoreKeeper2({numPlayers, target}) {
-    const [players, setPlayers] = useState({playerScore: 0})
+function ScoreKeeper2({numPlayers = 3, target = 5}) {
+   
 
     // Need a array to be created based off the number of players: DONE
     const playerArray = new Array(numPlayers).fill(0)
+
+    const [scores, setScores] = useState(playerArray)
 
     //Need to create a button for each player: DONE
     // Need Logic to Add a score to each player once the button is clicked
     
 
-const addScore = ()=>{
-    setPlayers()
+const incrementScore = (index)=>{
+    setScores(previousScores => {
+        const copy = [...previousScores]; 
+        copy[index] += 1; 
+        return copy
+    })
 }
 
+const reset = () =>{
+    setScores(playerArray)
+}
 
     
     return(
         <div>
-                {playerArray.map((item, index)=>{
-                   
-                    return <div>
-                        <ul>
-                        <li key={index + 1}>Player {index +1}: {item}</li>
 
-                        </ul>
-                            
-                            <button onClick={addScore}>+</button>
-
-                            </div>
+            <h1>Score Keeper</h1>
+            {scores.map((score, index)=>{
+            
+                return ( 
+                <div>
+                    <ul>
+                            <li key={index}>
+                                Player {index+1}: {score}
+                                <button onClick={()=> incrementScore(index)}>+1</button>
+                                {score >= target && "Winner!"}
+                            </li>
+                    </ul>
                     
-
-                 
-                })}
+                    </div>
+                )
+            })}
            
-            <button>Reset</button>
+            <button onClick={reset}>Reset</button>
         </div>
     )
 }

@@ -1,27 +1,8 @@
 
 import './App.css'
-import Chicken from './Chicken'
-import Greeter from './Greeter'
-import Die from './Die'
-import ListPicker from './ListPicker'
-import DoubleDice from './DoubleDice'
-import Heading from './Heading'
-import ColorList from './ColorList'
-import SlotMachine from './SlotMachine'
-import ShoppingList from './ShoppingList'
-import PropertyList from './PropertyList'
-import Clicker from './Clicker'
-import Form from './Form'
-import Counter from './Counter'
-import Toggler from './Toggler'
-import TogglerCounter from './ToggleCounter'
-import ColorBox from './ColorBox'
-import ColorBoxGrid from './ColorBoxGrid'
-import Counter2 from './Counter2'
-import Dumbo from './Dumbo'
-import ScoreKeeper from './ScoreKeeper'
-import EmojiClicker from './EmojiClicker'
-import ScoreKeeper2 from './ScoreKeeper2'
+
+import Die2 from './Die2'
+
 
 
 
@@ -77,7 +58,7 @@ function App() {
   return (
     <>
 
-   <ScoreKeeper2 numPlayers={10} target={5}></ScoreKeeper2>
+   <Die2 value={5}></Die2>
     
 
 
