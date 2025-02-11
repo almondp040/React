@@ -1,5 +1,7 @@
 
 import './App.css'
+import BoxGrid from './BoxGrid'
+
 import Dice from './Dice'
 import Die from './Die'
 import LuckyN from './LuckyN'
@@ -18,9 +20,7 @@ function App() {
 
   return (
     <>
-<LuckyN numDice={2} winCheck={lessThan4} title='Roll Less Than 4'></LuckyN>
-<LuckyN numDice={2} winCheck={allSameValue} title='Snake Eyes!'></LuckyN>
-
+    <BoxGrid></BoxGrid>
     </>
   )
 }
