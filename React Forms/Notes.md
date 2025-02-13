@@ -22,3 +22,21 @@
     - Use htmlFor in the label element to assign labels to inputs
     - VS Code automatically does this for us :), but see Username Form as an example 
 
+- Working with Multiple Inputs
+    - See the SignUp Form file for an example
+    - You must have a seperate state for each input same for the input HTML and the label
+    - But there is a better approach that isn't making a seperate piece of state for every input field
+    - Instead we can use an object!
+
+- Handling Multiple Inputs 
+    - To Handle multiple controlled inputs
+        - Instead of making a separate onChange function for every single input, we can make one generic function for multiple inputs
+        - Add HTML name attribute to each JSX input element 
+        - Then the handler function can determine the key in state to update based on the event.target.name
+        - Using this method, keys in state MUST match input name attributes!
+        - See SignUpFormNew for an example
+
+- Shopping List Example
+    - Parent: ShoppingList Component which will manage a list of shopping items
+    - Child: New List Item Form: Component to add items to the list
+    - 

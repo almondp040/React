@@ -1,6 +1,6 @@
 import { useState } from "react"
-function UsernameForm(params) {
-    const [username, setUsername] = useState("Timmy")
+function UsernameForm() {
+    const [username, setUsername] = useState("")
     
     const updateUsername = (event) => {
         console.log("Changed!!!")
