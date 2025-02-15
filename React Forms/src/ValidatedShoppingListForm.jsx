@@ -1,16 +1,28 @@
 import { useState } from "react";
 
-function ShoppingListForm({addItem}) {
+
+function ValidatedShoppingListForm({addItem}) {
     
-    const [formData, setFormData] = useState([{
+    const [formData, setFormData] = useState({
         product: "", 
         quantity: 0
-    }])
+    })
 
+    const [isProductValid, setIsProductValid] = useState(false)
+
+    const validate = (product) =>{
+    if (product.length === 0) {
+        setIsProductValid(false)
+    } else {
+        setIsProductValid(true)
+    }
+}
     const handleChange = (event) => {
         const changedField = event.target.name
         const newValue = event.target.value
-        
+        if (changedField === "product") {
+            validate(newValue)
+        } 
         setFormData(currentValue => {
             return {
                 ...currentValue, 
@@ -25,9 +37,12 @@ const submitForm = () =>{
 
 const handleSubmit = (event) =>{
     event.preventDefault()
-    console.log("Submitted")
-    addItem(formData)
-    setFormData({product: "", quantity: 0})
+    if (isProductValid) {
+        console.log("Submitted")
+        addItem(formData)
+        setFormData({product: "", quantity: 0})
+    }
+
 }
     return(
         <>
@@ -43,6 +58,8 @@ const handleSubmit = (event) =>{
             value={formData.product}
             onChange={handleChange}
             />
+
+            { !isProductValid && (<p style={{color: 'red'}}>Product name cannot be empty</p>)}
         {/* quantity input */}
         <label htmlFor="quantity">Quantity</label>
             <input 
@@ -54,11 +71,11 @@ const handleSubmit = (event) =>{
             onChange={handleChange}
             />
 
-<button>Add Item</button>
+<button disabled={!isProductValid}>Add Item</button>
         </form>
         
         </>
     )
 }
 
-export default ShoppingListForm
+export default ValidatedShoppingListForm

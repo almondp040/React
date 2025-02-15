@@ -39,4 +39,17 @@
 - Shopping List Example
     - Parent: ShoppingList Component which will manage a list of shopping items
     - Child: New List Item Form: Component to add items to the list
-    - 
+    
+- Passing Data Up to a Parent Component
+    - In React we generally have downward data flow: 
+        - "Smart" parent components with simpler child components 
+        - But it's common for form components to manage their own state
+        - But smarter parent component usually has a doSomethingOnSubmit method to update its state after the form submission
+        - So: parent passes its doSomethingOnSubmit method as a prop to a child 
+        - Child component calls this method, updating the parent's state
+        - Child is "dumber" - all it knows is to invoke that function with its data
+
+- Form Validation From Scratch
+    - We can do this in 2 ways: 
+        - Create state for each validation: See Validate Shopping List File for an example
+        - Use a library for form validation: React Hook Form library
