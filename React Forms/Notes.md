@@ -53,3 +53,7 @@
     - We can do this in 2 ways: 
         - Create state for each validation: See Validate Shopping List File for an example
         - Use a library for form validation: React Hook Form library
+
+- Validations using React Hook Form 
+    - Library that helps us write forms with built in validation
+    - Really take a deep dive into the docs, and watch the tutorial video
