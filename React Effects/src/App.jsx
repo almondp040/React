@@ -1,7 +1,12 @@
 
 import './App.css'
 import Counter from './Counter'
+import GitHubProfileSearchForm from './GitHubProfileSearchForm'
+import GitHubProfileViewerWithSearch from './GithubProfileViewerWithSearch'
+
 import QuoteFetcher from './QuoteFetcher'
+import QuoteFetcherLoader from './QuoteFetcherLoader'
+
 
 
 function App() {
@@ -10,7 +15,8 @@ function App() {
   return (
     <>
       {/* <Counter/> */}
-      <QuoteFetcher/>
+      
+      <GitHubProfileViewerWithSearch/>
     </>
   )
 }

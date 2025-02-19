@@ -33,3 +33,7 @@
         - Have an effect that runs only once
         - Inside effect, when API calls is finished, will set state and re-render
         - Good to define our async function first then add it to the state, but you MUST wrap it in a function
+
+- Loading Functionality
+     - View Quote Fetcher Loader for loading logic, so it shows something when the page loads   
+     - Check out the isLoading state functionality
