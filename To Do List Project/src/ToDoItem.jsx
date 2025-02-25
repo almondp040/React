@@ -5,12 +5,12 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Checkbox from '@mui/material/Checkbox';
 import IconButton from '@mui/material/IconButton';
-import CommentIcon from '@mui/icons-material/Comment';
+import Delete from '@mui/icons-material/Delete';
 
 
 function ToDoItem({todos, remove, toggle}) {
 
-    console.log(todos); 
+    // console.log(todos); 
 
     const labelId = `checkbox-list-label-${todos.id}`;
 
@@ -20,7 +20,7 @@ function ToDoItem({todos, remove, toggle}) {
               key={todos.id}
               secondaryAction={
                 <IconButton edge="end" aria-label="comments" onClick={remove}>
-                  <CommentIcon />
+                  <Delete />
                 </IconButton>
               }
               disablePadding

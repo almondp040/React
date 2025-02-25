@@ -1,28 +1,36 @@
 // Imports:
 import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import Checkbox from '@mui/material/Checkbox';
-import IconButton from '@mui/material/IconButton';
-import CommentIcon from '@mui/icons-material/Comment';
-import { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
+import { useState, useEffect } from 'react';
 import ToDoItem from './ToDoItem';
+import ToDoForm from './ToDoForm';
+import { Box, Typography } from '@mui/material';
+
 
 // Example To Do Data: 
-const  initialToDos = [
-    {id: 1, text: "Walk the dog", completed: true}, 
-    {id: 2, text: "Water the plant", completed: true}, 
-    {id: 3, text: "Shop for auto loan", completed: false}, 
-    {id: 4, text: "Excercise", completed: true}, 
-    {id: 5, text: "Shop for clothes", completed: true}, 
-]; 
+// const  initialToDos = [
+//     {id: 1, text: "Walk the dog", completed: true}, 
+//     {id: 2, text: "Water the plant", completed: true}, 
+//     {id: 3, text: "Shop for auto loan", completed: false}, 
+//     {id: 4, text: "Excercise", completed: true}, 
+//     {id: 5, text: "Shop for clothes", completed: true}, 
+// ]; 
 
+ const getInitialData = () =>{
+
+   const data = JSON.parse(localStorage.getItem("todos")); 
+
+   if(!data) return []; 
+   return data
+ }; 
 
 function ToDoList() {
     // Component Functionality: 
-    const [todos, setToDos] = useState(initialToDos)
+    const [todos, setToDos] = useState(getInitialData)
+
+    useEffect(()=>{
+        localStorage.setItem("todos", JSON.stringify(todos))
+    }, [todos]); 
 
     // Remove To Do Item: 
     const removeToDo = (id) =>{
@@ -44,11 +52,28 @@ const toggleToDo = (id) =>{
     )
 }
 
+// Add To Do: 
+const addToDo = (text) =>{
+    setToDos(previousToDo =>{
+     return   [...previousToDo, {id: uuidv4(), text: text, completed: false}]
+    })
+}
+
 
     // To Do List Form: 
     return (
         <>
-        <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}></List>
+        <Box sx={{
+            display: 'flex', 
+            justifyContent: 'center',
+            flexDirection: 'column',
+            alignItems: 'center', 
+            m: 3
+        }}>
+        <Typography variant="h3" component="h3" sx={{ flexGrow: 1 }}>
+            To Do Practice
+          </Typography>
+        <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
         {/* Map to pass our data to the ToDoItem Prop */}
             {todos.map((todo) =>{
                 console.log(todo)
@@ -60,7 +85,9 @@ const toggleToDo = (id) =>{
               toggle = {()=> toggleToDo(todo.id)}/>
               
             }) }
-            
+            <ToDoForm addToDo = {addToDo} />
+            </List>
+            </Box>
         </>
       );
 
